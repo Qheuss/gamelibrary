@@ -1,0 +1,25 @@
+aside {
+  grid-area: aside;
+  min-width: 25rem;
+  max-width: 25rem;
+  min-height: 100vh;
+  background-color: $fake-black;
+  position: fixed;
+  p {
+    font-size: large;
+    cursor: pointer;
+  }
+  input {
+    background-color: rgba(0, 0, 0, 0.384);
+    border: none;
+    outline: none;
+    padding: 1.5rem 6rem;
+    font-size: 1.6rem;
+    max-width: 20rem;
+    border-radius: 0.75rem;
+    color: $fake-white;
+    position: absolute;
+    top: 2.5%;
+    right: -350%;
+  }
+}

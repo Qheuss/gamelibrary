@@ -5,12 +5,6 @@
 
 //   $font-1: "font-1", sans-serif;
 
-$color-1: #84dccf;
-$color-2: #ef626c;
-$grey: #312f2f;
-$fake-black: #22181c;
-$fake-white: #f6e8ea;
-
 * {
   padding: 0;
   margin: 0;
@@ -20,6 +14,7 @@ $fake-white: #f6e8ea;
 
 html {
   font-size: 62.5%;
+  color: $fake-white;
 }
 
 body {
