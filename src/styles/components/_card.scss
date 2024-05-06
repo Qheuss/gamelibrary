@@ -1,11 +1,54 @@
 .card {
-  min-height: 25em;
-  max-width: 15rem;
+  min-height: 30em;
+  max-width: 17.5rem;
   overflow: hidden;
+  position: relative;
   cursor: pointer;
-  img {
+  border-radius: 0.7rem;
+  .gameImage {
     object-fit: cover;
-    min-height: 25rem;
-    max-width: 15rem;
+    min-height: 100%;
+    max-width: 100%;
+  }
+  .infos {
+    position: absolute;
+    color: $fake-white;
+    top: 0;
+    left: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+    padding: 5rem 0;
+    h2 {
+      font-size: 2rem;
+    }
+    hr {
+      min-width: 10rem;
+      border: none;
+      border-top: 1px solid $color-2;
+    }
+    div {
+      h3 {
+        font-size: 1.2rem;
+      }
+      .rating {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+  &:hover {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+  &:hover .infos {
+    opacity: 1;
+    transform: scaleY(1);
   }
 }

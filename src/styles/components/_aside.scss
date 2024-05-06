@@ -1,25 +1,36 @@
 aside {
   grid-area: aside;
   min-width: 25rem;
-  max-width: 25rem;
   min-height: 100vh;
   background-color: $fake-black;
   position: fixed;
-  p {
-    font-size: large;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logo {
     cursor: pointer;
+    margin: 3rem 0 5rem 0;
+    background-image: url(../assets/images/logo.svg);
+    background-repeat: no-repeat;
+    width: 7.5rem;
+    height: 6rem;
+    border-radius: 10rem;
   }
-  input {
-    background-color: rgba(0, 0, 0, 0.384);
-    border: none;
-    outline: none;
-    padding: 1.5rem 6rem;
-    font-size: 1.6rem;
-    max-width: 20rem;
-    border-radius: 0.75rem;
+  .aside__content {
+    min-width: 80%;
     color: $fake-white;
-    position: absolute;
-    top: 2.5%;
-    right: -350%;
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 2rem 0;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 1.5rem 0;
+    }
+    h3 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
   }
 }

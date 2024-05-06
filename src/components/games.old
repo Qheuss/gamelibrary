@@ -1,0 +1,45 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Card from './Card';
+
+export default function Games() {
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  // const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    axios
+      .get(`https://api.rawg.io/api/games?key=${import.meta.env.VITE_API_KEY}`)
+      .then((res) => setData(res.data.results));
+  }, []);
+
+  useEffect(() => {
+    const filteredGames = data.filter((game) =>
+      game.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredData(filteredGames);
+  }, [searchTerm, data]);
+
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  return (
+    <main className="games">
+      <input
+        type="search"
+        placeholder="&#128269; Search"
+        value={searchTerm}
+        onChange={handleSearchChange}
+      />
+      <ul>
+        {filteredData.map((game) => (
+          <Card key={game.name} game={game} />
+        ))}
+      </ul>
+    </main>
+  );
+}
+
+// &page=${page}
