@@ -1,9 +1,10 @@
-// @font-face {
-//     font-family: "font-1";
-//     src: url(../assets/fonts/JosefinSans-Medium.ttf);
-//   }
+@font-face {
+  font-family: 'Barlow';
+  src: url(../assets/fonts/Barlow-Regular.ttf),
+    url(../assets/fonts/Barlow-Bold.ttf);
+}
 
-//   $font-1: "font-1", sans-serif;
+$Barlow: 'Barlow', sans-serif;
 
 * {
   padding: 0;
@@ -20,8 +21,22 @@ html {
 body {
   background: $grey;
   min-height: 100vh;
+  font-family: $Barlow;
 }
 
 li {
   list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+a {
+  color: $fake-white;
 }

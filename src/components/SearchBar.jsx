@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 const SearchBar = ({ data, setFilteredData }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,6 +25,11 @@ const SearchBar = ({ data, setFilteredData }) => {
       />
     </>
   );
+};
+
+SearchBar.propTypes = {
+  data: PropTypes.array.isRequired,
+  setFilteredData: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

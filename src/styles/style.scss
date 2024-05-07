@@ -1,7 +1,11 @@
 @import './components/variables';
-@import './reset';
 @import './components/footer';
 @import './components/games';
 @import './components/card';
 @import './components/aside';
+@import './components/gameDetails';
+
 @import './pages/home';
+@import './pages/game';
+
+@import './reset';

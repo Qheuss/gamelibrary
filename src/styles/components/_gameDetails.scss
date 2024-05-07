@@ -1,0 +1,103 @@
+.gameDetails {
+  padding: 10.5rem 3rem 0 28rem;
+  display: grid;
+  grid-template:
+    'banner banner' 35rem
+    'description description' 35rem;
+  gap: 7rem;
+  .banner {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    grid-area: banner;
+    .banner__picture {
+      width: 60rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem;
+      }
+    }
+    .banner__title {
+      width: 60rem;
+      font-weight: 700;
+      background-color: #14141460;
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      h1 {
+        font-size: 3rem;
+        text-align: center;
+      }
+      hr {
+        width: 30%;
+        align-self: center;
+      }
+      .ratings {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1rem;
+        font-size: 1.5rem;
+        text-align: start;
+        .ratings__ratings {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          text-align: center;
+          .progress {
+            height: 1rem;
+            width: 100%;
+            border-radius: 0.3rem;
+            background-color: $color-2;
+            div {
+              border-radius: 0.3rem;
+            }
+          }
+        }
+        .ratings__notes {
+          li {
+            margin: 0.5rem 0;
+          }
+        }
+      }
+    }
+  }
+  .description {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    grid-area: description;
+    .description__about {
+      width: 60rem;
+      overflow: auto;
+      h2 {
+        font-size: 2.6rem;
+        margin-bottom: 4rem;
+      }
+      p {
+        font-size: 1.5rem;
+        color: #f6e8eab3;
+      }
+    }
+    .description__more {
+      width: 60rem;
+      ul {
+        padding: 6.5rem 0 0 8rem;
+        li {
+          font-size: 1.5rem;
+          margin: 0.5rem 0;
+          .whatInfo {
+            display: inline-block;
+            min-width: 18.5rem;
+            color: #f6e8eab3;
+          }
+          a {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

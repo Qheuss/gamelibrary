@@ -1,11 +1,15 @@
+import { NavLink } from 'react-router-dom';
+
 const Aside = () => {
   return (
     <aside>
-      <a className="logo"></a>
+      <NavLink to={`/`}>
+        <img className="logo" src="../src/assets/images/logo.svg" alt="logo" />
+      </NavLink>
       <div className="aside__content">
-        <h1>Game Library</h1>
-        <h2>Categories</h2>
-        <h3>All games</h3>
+        <h2>Game Library</h2>
+        <h3>Categories</h3>
+        <h4>All games</h4>
       </div>
     </aside>
   );
