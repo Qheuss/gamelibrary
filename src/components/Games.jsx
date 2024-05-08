@@ -4,6 +4,8 @@ import Card from './Card';
 import SearchBar from './SearchBar';
 import Aside from '../components/Aside';
 
+// TODO add infinite scroll
+
 export default function Games() {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);

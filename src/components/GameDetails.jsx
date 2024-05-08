@@ -8,6 +8,8 @@ const GameDetails = ({ gameId, game }) => {
   const ratings = data.ratings || [];
   const gameProp = game.game;
 
+  // TODO add youtube trailers
+
   useEffect(() => {
     axios
       .get(
@@ -21,7 +23,7 @@ const GameDetails = ({ gameId, game }) => {
   return (
     <div className="gameDetails">
       <NavLink to={`/`}>
-        <img className="logo" src="../src/assets/images/logo.svg" alt="logo" />
+        <img className="logo" src="/assets/images/logo.svg" alt="logo" />
       </NavLink>
       <section className="banner">
         <picture className="banner__picture">
