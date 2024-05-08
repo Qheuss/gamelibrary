@@ -1,4 +1,3 @@
-import Aside from '../components/Aside';
 import Footer from '../components/Footer';
 import { useParams, useLocation } from 'react-router-dom';
 import GameDetails from '../components/GameDetails';
@@ -11,7 +10,6 @@ const GamePage = () => {
   return (
     <>
       <div className="gameGrid">
-        <Aside />
         <GameDetails gameId={gameId} game={game} />
       </div>
       <Footer />

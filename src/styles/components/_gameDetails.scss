@@ -1,18 +1,24 @@
 .gameDetails {
-  padding: 10.5rem 3rem 0 28rem;
+  padding-top: 10.5rem;
   display: grid;
   grid-template:
     'banner banner' 35rem
     'description description' 35rem;
-  gap: 7rem;
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 3.75rem);
+  }
   .banner {
     display: flex;
     justify-content: center;
     gap: 3rem;
     grid-area: banner;
+    margin-bottom: 7rem;
     .banner__picture {
       width: 60rem;
-      img {
+      .bannerImage {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -71,14 +77,17 @@
     grid-area: description;
     .description__about {
       width: 60rem;
-      overflow: auto;
       h2 {
         font-size: 2.6rem;
         margin-bottom: 4rem;
       }
-      p {
-        font-size: 1.5rem;
-        color: #f6e8eab3;
+      .aboutText {
+        overflow: auto;
+        max-height: calc(100% - 7.8rem);
+        p {
+          font-size: 1.5rem;
+          color: #f6e8eab3;
+        }
       }
     }
     .description__more {

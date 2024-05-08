@@ -1,0 +1,20 @@
+.genres {
+  li {
+    button {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      cursor: pointer;
+      border: none;
+      text-align: left;
+      background-color: transparent;
+      color: $fake-white;
+      width: 20rem;
+      transition: 0.3s;
+      &:hover {
+        text-decoration: underline;
+        transform: scale(1.1);
+        translate: 0.9rem;
+      }
+    }
+  }
+}

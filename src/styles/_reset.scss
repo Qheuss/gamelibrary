@@ -1,7 +1,8 @@
 @font-face {
   font-family: 'Barlow';
-  src: url(../assets/fonts/Barlow-Regular.ttf),
-    url(../assets/fonts/Barlow-Bold.ttf);
+  src: url(../assets/fonts/Barlow-Regular.ttf) format('truetype')
+      font-weight-normal,
+    url(../assets/fonts/Barlow-Bold.ttf) format('truetype') font-weight-bold;
 }
 
 $Barlow: 'Barlow', sans-serif;
@@ -34,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
+  font-weight: bold;
 }
 
 a {

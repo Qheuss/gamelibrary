@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const GameDetails = ({ gameId, game }) => {
   const [data, setData] = useState([]);
@@ -19,9 +20,16 @@ const GameDetails = ({ gameId, game }) => {
 
   return (
     <div className="gameDetails">
+      <NavLink to={`/`}>
+        <img className="logo" src="../src/assets/images/logo.svg" alt="logo" />
+      </NavLink>
       <section className="banner">
         <picture className="banner__picture">
-          <img src={data.background_image} alt={data.name} />
+          <img
+            className="bannerImage"
+            src={data.background_image}
+            alt={data.name}
+          />
         </picture>
         <div className="banner__title">
           <h1>{data.name}</h1>
@@ -66,7 +74,9 @@ const GameDetails = ({ gameId, game }) => {
       <section className="description">
         <div className="description__about">
           <h2>About</h2>
-          <p>{data.description_raw}</p>
+          <div className="aboutText">
+            <p>{data.description_raw}</p>
+          </div>
         </div>
         <div className="description__more">
           <ul>
